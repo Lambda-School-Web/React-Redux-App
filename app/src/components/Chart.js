@@ -42,7 +42,7 @@ const Chart = () => {
       name: item.name,
       Score: Math.floor(item.score_out_of_10 * 10)
     }));
-    console.log(data);
+
     return (
       <Radar
         width={800}
