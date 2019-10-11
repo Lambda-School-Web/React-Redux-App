@@ -38,10 +38,16 @@ const Chart = () => {
   const isSearching = useSelector(state => state.isSearching);
 
   const renderChart = () => {
-    const data = urbanAreaScores.categories.map(item => ({
-      name: item.name,
-      Score: Math.floor(item.score_out_of_10 * 10)
-    }));
+    const data = urbanAreaScores.categories.map(item => {
+      console.log(item.score_out_of_10);
+      return {
+        name: item.name,
+        Score:
+          item.score_out_of_10 === 0
+            ? "0"
+            : Math.floor(item.score_out_of_10 * 10)
+      };
+    });
 
     return (
       <Radar

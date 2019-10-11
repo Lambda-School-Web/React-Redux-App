@@ -21,7 +21,7 @@ const SearchCity = () => {
       )[0].href;
       dispatch(searchUrbanCity(url));
     }
-  }, [selectedOption, urbanAreas]);
+  }, [selectedOption, urbanAreas, dispatch]);
 
   const options = urbanAreas.map(item => ({
     value: item.name,
