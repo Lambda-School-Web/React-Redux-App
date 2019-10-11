@@ -39,7 +39,6 @@ const Chart = () => {
 
   const renderChart = () => {
     const data = urbanAreaScores.categories.map(item => {
-      console.log(item.score_out_of_10);
       return {
         name: item.name,
         Score:
